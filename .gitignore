@@ -1,4 +1,6 @@
 .ipynb_checkpoints
 *.h5
+*.zip
+*.csv
 logs
 __pycache__
