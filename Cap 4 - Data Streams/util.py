@@ -19,7 +19,7 @@ class FileStreamer:
         if drop_cols != None:
             self.data = self.data.drop(columns=drop_cols)
             
-        if label_col!=None:
+        if type(label_col) != type(None):
             self.label = self.data[label_col]
             self.data = self.data.drop(columns=label_col)
             
@@ -38,7 +38,7 @@ class FileStreamer:
             i = self.index * self.batch_size
             j = (self.index+1) * self.batch_size
             
-            if self.label!=None:
+            if type(self.label) != type(None):
                 return self.data.iloc[i:j], self.label.iloc[i:j]
             return self.data.iloc[i:j]
         else:
