@@ -3,5 +3,9 @@
 *.zip
 *.csv
 *.txt
+*.pickle
+*.npy
+*.7z
+*.jpg
 logs
 __pycache__
